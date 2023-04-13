@@ -1,0 +1,9 @@
+.error-container {
+  text-align: center;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+
+.network-error {
+  font-family: 'Press Start 2P', cursive;
+}

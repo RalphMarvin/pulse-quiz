@@ -1,0 +1,32 @@
+.game {
+  background-color: #050c22;
+  overflow: hidden !important;
+}
+
+.quiz-container {
+  text-align: center;
+  margin-left: 24rem;
+  margin-right: 24rem;
+  border: 1px solid #202637;
+  background-color: #0c162d;
+  color: #00cfc8;
+  border-radius: 15px;
+  padding: 20px 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  .quiz-container {
+    text-align: center;
+    margin-left: 0.4rem;
+    margin-right: 0.4rem;
+    border: 1px solid #202637;
+    background-color: #0c162d;
+    color: #00cfc8;
+    border-radius: 15px;
+    padding: 20px 35px;
+  }
+}
+
+.question-number {
+  color: #627597;
+}

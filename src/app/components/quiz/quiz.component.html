@@ -1,0 +1,47 @@
+<div class="game d-flex justify-content-center vh-100 align-items-center">
+  <app-game-background></app-game-background>
+
+  <div *ngIf="showError && !isLoading">
+    <app-game-network-error></app-game-network-error>
+  </div>
+
+  <div *ngIf="isLoading">
+    <app-game-loading></app-game-loading>
+  </div>
+
+  <div *ngIf="!isLoading && !showError" class="container position-relative">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end pb-5 ps-2">
+      <button class="btn btn-danger ms-md-auto" type="button" (click)="endGame()">End Game</button>
+    </div>
+
+    <div class="d-flex align-items-center justify-content-center h-100 position-relative">
+      <div *ngIf="!isGameOver">
+        <div class="quiz-container">
+          <div class="question-number pb-3">
+            Question {{ questionNumber }} / 10
+          </div>
+
+          <div class="w-auto pb-3">
+            <h2>{{ currentQuestion!.question }}</h2>
+          </div>
+
+          <div class="d-grid gap-2 col-md-8 mx-auto">
+            <button class="btn btn-outline-danger btn-lg" *ngFor="let answer of currentQuestion!.answers"
+              (click)="selectAnswer(answer)" [class.active]="selectedAnswer === answer" type="button">{{ answer
+              }}</button>
+          </div>
+        </div>
+
+        <div class="my-4 text-center">
+          <button type="button" class="btn btn-danger btn-lg" *ngIf="selectedAnswer" (click)="nextQuestion()">Next
+            Question</button>
+        </div>
+      </div>
+
+      <div *ngIf="isGameOver" class="text-center">
+        <app-game-over [score]="score" [questions]="questions"></app-game-over>
+        <button class="mt-5 btn btn-danger btn-lg" (click)="restartGame()">Play Again</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="game-over">
+  <h2 class="text-light">Game Over!</h2>
+  <div class="d-flex align-items-center justify-content-center">
+    <div *ngIf="score! <= 5">
+      <h1 class="text-danger">You scored <span class="large-text">{{ score }}</span> out of {{ questions!.length }}.</h1>
+      <h1 class="text-danger typed">You failed buddy!</h1>
+    </div>
+    <div *ngIf="score! > 5">
+      <h1 class="text-success">You scored <span class="large-text">{{ score }}</span> out of {{ questions!.length }}.</h1>
+      <h1 class="text-success typed">You passed buddy!</h1>
+    </div>
+  </div>
+</div>
