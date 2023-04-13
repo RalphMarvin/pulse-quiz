@@ -14,7 +14,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## Demo
 
-Visit [Pulse Quiz Game](https://github.com/) to see a demo of the  quiz game in action.
+Visit [Pulse Quiz Game](https://pulse-quiz.vercel.app/) to see a demo of the  quiz game in action.
 
 ## Code scaffolding
 
